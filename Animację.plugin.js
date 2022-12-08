@@ -1,14 +1,13 @@
 /**
  * @name Animację
- * @version 0.0.2
+ * @version 0.0.3
  * @description Animowane obiekty
  * @author DIHO
- * @invite PWtAHjBXtG
  * @authorLink https://github.com/DIHO1
  * @authorId 904418700399087626
- * @website https://github.com/Mopsgamer/BetterDiscord-codes/tree/Animations
- * @source https://raw.githubusercontent.com/Mopsgamer/BetterDiscord-codes/Animations/Animations.plugin.js
- * @updateUrl https://raw.githubusercontent.com/Mopsgamer/BetterDiscord-codes/Animations/Animations.plugin.js
+ * @website https://github.com/DIHO1/Animacje
+ * @source https://raw.githubusercontent.com/DIHO1/Animacje/main/Animację.plugin.js
+ * @updateUrl https://raw.githubusercontent.com/DIHO1/Animacje/main/Animację.plugin.js
  */
 
 module.exports = meta => {
@@ -16,8 +15,8 @@ module.exports = meta => {
     const config = {
         changelog: [
             //{ "items": [""], "title": "New Stuff" },
-            { "items": ["Interfejs ustawień został ulepszony."], "title": "Poprawiono", "type": "improved" },
-            { "items": ["Naprawiono animację drugiej wiadomości.", "Naprawiono obsługę błędów dla przycisku aktualizacji tłumaczenia."], "title": "Naprawiono", "type": "fixed" }
+            { "items": ["Dodano discord."], "title": "Poprawiono", "type": "improved" },
+           // { "items": ["Naprawiono animację drugiej wiadomości.", "Naprawiono obsługę błędów dla przycisku aktualizacji tłumaczenia."], "title": "Naprawiono", "type": "fixed" }
         ],
         info: {
             authors: [{
