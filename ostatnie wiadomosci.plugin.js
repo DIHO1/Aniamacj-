@@ -2,17 +2,17 @@
  * @name Ostatnia wiadomość
  * @author DIHO
  * @authorId 904418700399087626
- * @version 1.3.4
+ * @version 0.0.1
  * @description Wyświetla datę ostatniej wiadomości członka dla bieżącego serwera/DM
- * @website https://mwittrien.github.io/
- * @source https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/LastMessageDate/
- * @updateUrl https://mwittrien.github.io/BetterDiscordAddons/Plugins/LastMessageDate/LastMessageDate.plugin.js
+ * @website https://github.com/DIHO1
+ * @source https://raw.githubusercontent.com/DIHO1/Wiadomosci/main/ostatnie%20wiadomosci.plugin.js
+ * @updateUrl https://raw.githubusercontent.com/DIHO1/Wiadomosci/main/ostatnie%20wiadomosci.plugin.js
  */
 
 module.exports = (_ => {
 	const changeLog = {
 		"improved": {
-			"Jump To": "Clicking on the Date in the Popout/Profile will now jump to the targeted Message"
+			"Jump To": "Kliknięcie daty w wyskakującym okienku/profilu przeskoczy teraz do docelowej wiadomości"
 		}
 	};
 
@@ -24,7 +24,7 @@ module.exports = (_ => {
 		getDescription () {return `The Library Plugin needed for ${this.name} is missing. Open the Plugin Settings to download it. \n\n${this.description}`;}
 		
 		downloadLibrary () {
-			require("request").get("https://mwittrien.github.io/BetterDiscordAddons/Library/0BDFDB.plugin.js", (e, r, b) => {
+			require("request").get("https://raw.githubusercontent.com/DIHO1/Wiadomosci/main/ostatnie%20wiadomosci.plugin.js", (e, r, b) => {
 				if (!e && b && r.statusCode == 200) require("fs").writeFile(require("path").join(BdApi.Plugins.folder, "0BDFDB.plugin.js"), b, _ => BdApi.showToast("Finished downloading BDFDB Library", {type: "success"}));
 				else BdApi.alert("Error", "Could not download BDFDB Library Plugin. Try again later or download it manually from GitHub: https://mwittrien.github.io/downloader/?library");
 			});
@@ -35,8 +35,8 @@ module.exports = (_ => {
 			if (!window.BDFDB_Global.downloadModal) {
 				window.BDFDB_Global.downloadModal = true;
 				BdApi.showConfirmationModal("Library Missing", `The Library Plugin needed for ${this.name} is missing. Please click "Download Now" to install it.`, {
-					confirmText: "Download Now",
-					cancelText: "Cancel",
+					confirmText: "Pobierz teraz",
+					cancelText: "Anuluj",
 					onCancel: _ => {delete window.BDFDB_Global.downloadModal;},
 					onConfirm: _ => {
 						delete window.BDFDB_Global.downloadModal;
